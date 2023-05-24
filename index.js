@@ -9,6 +9,12 @@ document.addEventListener('click', function(e){
     if(e.target.dataset.remove){
         removeProductFromOrder(e.target.dataset.remove)
     }
+    if(e.target.id === 'complete-btn'){
+        showConfirmNotification()
+    }
+    if(e.target.id === 'close-notification'){
+        hideConfirmNotification()
+    }
 })
 
 function addToOrderList(productId){
@@ -36,7 +42,10 @@ function addToOrderList(productId){
  document.getElementById('total').innerHTML = `
  <h1>Total Price</h1>
  <h3 class="order-total-price">$${totalPrice}</h3>
+ `
 
+ document.getElementById('complete-order').innerHTML = `
+ <button id="complete-btn">Complete order</button>
  `
 }
 
@@ -59,6 +68,22 @@ function removeProductFromOrder(productId){
         <h1>Total Price</h1>
         <h3 class="order-total-price">$${totalPrice}</h3>
     `;
+
+    if (totalPrice === 0) {
+        hideEmptyOrder();
+    }
+}
+
+function hideEmptyOrder(){
+    document.getElementById('order').classList.add('hidden')
+}
+
+function showConfirmNotification(){
+    document.getElementById('confirm-notification').classList.remove('hidden')
+}
+
+function hideConfirmNotification(){
+    document.getElementById('confirm-notification').classList.add('hidden')
 }
 
 function getMenu(){
