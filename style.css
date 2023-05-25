@@ -92,7 +92,7 @@ body{
 /* Order */
 #order{
     margin: 0 auto;
-max-width: 510px;
+    max-width: 510px;
 }
 .order-title{
     text-align: center;
@@ -191,18 +191,18 @@ max-width: 510px;
 }
 
 .card-detail{
-    padding: 10px;
-    margin: 10px 10px;
-    border-radius: 6px;
     border: 1px solid #757575;
 }
 
 #pay-btn{
-    margin: 10px 10px;
-    padding: 10px;
     background: #16DB99;
     color: white;
     border: none;
+}
+
+#pay-btn, .card-detail{
+    padding: 10px;
+    margin: 10px 10px;
     border-radius: 6px;
 }
 
@@ -219,11 +219,7 @@ max-width: 510px;
 }
 
 /*  Form */
-.confirm-loading-title{
-    font-size: 18px;
-}
-
-.complete-title{
+.confirm-loading-title, .complete-title{
     font-size: 18px;
 }
 
@@ -232,12 +228,7 @@ max-width: 510px;
 
 }
 
-.loading-gif{
-    width: 300px;
-
-}
-
-.cooking-gif{
+.loading-gif, .cooking-gif{
     width: 300px;
 }
 
