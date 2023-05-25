@@ -39,9 +39,6 @@ body{
 
 /* Main */
 
-.menu{
-}
-
 .products{
     border-bottom: 1px solid #D2D2D2;
     border-width: 100%;
@@ -55,7 +52,7 @@ body{
 .product-desc{
     display: flex;
     flex-direction:column ;
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 .product-img-desc{
@@ -132,7 +129,7 @@ body{
 }
 
 #total{
-    border-top: 2px solid #393333;
+    border-top: 1px solid #393333;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -240,4 +237,12 @@ body{
 
 .hidden{
     display: none;
+}
+
+.margin-left{
+    margin-left: 30px;
+}
+
+.margin-right{
+    margin-right: 30px;
 }

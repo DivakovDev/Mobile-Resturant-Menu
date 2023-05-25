@@ -33,18 +33,18 @@ function addToOrderList(productId){
     
     <div class="both">
         <section id="two">
-        <h1 class="productN">${targetProductObj.productName}</h1>
+        <h1 class="productN margin-left">${targetProductObj.productName}</h1>
         <button data-remove="${targetProductObj.uuid}">remove</button>
         </section>
-        <h3 class="price">$${targetProductObj.price}</h3>
+        <h3 class="price margin-right">$${targetProductObj.price}</h3>
     </div>
 
  `
  totalPrice += targetProductObj.price;
 
  document.getElementById('total').innerHTML = `
- <h1>Total Price</h1>
- <h3 class="order-total-price">$${totalPrice}</h3>
+ <h1 class="margin-left">Total Price</h1>
+ <h3 class="order-total-price margin-right">$${totalPrice}</h3>
  `
 
  document.getElementById('complete-order').innerHTML = `
