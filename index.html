@@ -33,14 +33,15 @@
             </div>
         </main>
         <form id="confirm-notification" class="hidden">
-            <div class="card-details">
+            <div id="card-details">
                 <h1 class="confirm-notification-title">Enter card details</h1>
-                <input class="card-detail" id="input1" type="text" placeholder="Enter your name" required/>
+                <input class="card-detail" name="fullName" id="input1" type="text" placeholder="Enter your name" required/>
                 <input class="card-detail" id="input2" type="text" placeholder="Enter card number" required/>
                 <input class="card-detail" id="input3" type="text" placeholder="Enter CVV" required/>
-                <button class="pay-btn" type="submit">Pay</button>
+                <button  id="pay-btn" type="submit">Pay</button>
+                <span id="close-notification">x</span>
+
             </div>
-            <span id="close-notification">x</span>
         </form>
     </div>
     <script src="/index.js" type="module"></script>

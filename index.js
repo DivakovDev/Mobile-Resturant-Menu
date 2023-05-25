@@ -15,6 +15,9 @@ document.addEventListener('click', function(e){
     if(e.target.id === 'close-notification'){
         hideConfirmNotification()
     }
+    if(e.target.id === 'pay-btn'){
+        confrimingOrder()
+    }
 })
 
 function addToOrderList(productId){
@@ -79,11 +82,47 @@ function hideEmptyOrder(){
 }
 
 function showConfirmNotification(){
-    document.getElementById('confirm-notification').classList.remove('hidden')
+    document.getElementById('confirm-notification').classList.toggle('hidden')
 }
 
 function hideConfirmNotification(){
     document.getElementById('confirm-notification').classList.add('hidden')
+}
+
+function confrimingOrder(){
+    const confrimNotification = document.getElementById('confirm-notification')
+    confrimNotification.addEventListener('submit',function(e){
+    e.preventDefault()
+
+    const confirmNotificationData = new FormData(confrimNotification)
+    const cardHolderName = confirmNotificationData.get('fullName')
+
+    document.getElementById('card-details').innerHTML = `
+    <div id="confirm-notification-loading">
+        <h1 class="confirm-loading-title">Wait a second to check card information!</h1>
+        <img class="loading-gif" src="img/loadingForFoodApp.gif"/>
+        <p id="upload-text">Uploading your data</p>
+        <span id="close-notification">x</span>
+    </div>
+    `
+
+    setTimeout(function(){
+        document.getElementById('upload-text').innerHTML = `
+        Making the sale...`
+    }, 3500)
+    
+    
+    setTimeout(function(){
+        document.getElementById('confirm-notification-loading').innerHTML = `
+        <h2 class="complete-title">Thanks for ordering from us <span class="confirm-display-name">${cardHolderName}</span></h2>
+        <img class="cooking-gif" src="img/start-cooking.gif">
+        <p class="wait-order">You are going to get your order after 30min/1h</p>
+        <span id="close-notification">x</span>
+
+    `}, 6000)
+
+    hideEmptyOrder()
+})
 }
 
 function getMenu(){
