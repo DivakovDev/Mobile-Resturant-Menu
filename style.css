@@ -60,6 +60,12 @@ body{
     display: flex;
 }
 
+.product-img{
+    margin: auto 0;
+    width: 80px;
+    height: 80px;
+}
+
 .productName, .productDesc, .prize{
     margin: 5px;
 }
