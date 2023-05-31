@@ -1,50 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/verdana" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Smythe&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/verdana" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
     <title>Lyusi's Resturant</title>
-</head>
-<body>
-    <div class="conatiner">
-        <header>
-            <img class="header-background-img" src="img/background-burger.png   " alt="background title burger photo">
-            <div class="header-titiles">
-                <h1 class="main-title">Lyusi's Diner</h1>
-                <h3 class="second-title">The best burgers and pizzas in town</h3>
-            </div>
-        </header>
-        <main>
-            <div id="menu">
-            </div>
-            <div id="order" class="hidden">
-                <h1 class="order-title">Your order</h1>
-                <div id="order-prod">
-                </div>
-                <div id="total">
-                </div>
-                <div id="complete-order"></div>
-            </div>
-        </main>
-        <form id="confirm-notification" class="hidden">
-            <div id="card-details">
-                <h1 class="confirm-notification-title">Enter card details</h1>
-                <input class="card-detail" name="fullName" id="input1" type="text" placeholder="Enter card holder name" required/>
-                <input class="card-detail" id="input2" type="text" placeholder="Enter card number" required/>
-                <input class="card-detail" id="input3" type="text" placeholder="Enter CVV" required/>
-                <button  id="pay-btn" type="submit">Pay</button>
-                <span id="close-notification">x</span>
+  </head>
+  <body>
+    <header>
+      <img
+        class="header-background-img"
+        src="img/background-burger.png   "
+        alt="background title burger photo"
+      />
+      <div class="header-titiles">
+        <h1 class="main-title">Lyusi's Diner</h1>
+        <h3 class="second-title">Online Restaurant!</h3>
+      </div>
+    </header>
+    <main>
+      <div id="menu"></div>
+      <div id="order" class="hidden">
+        <h1 class="order-title">Your order</h1>
+        <div id="order-prod"></div>
+        <div id="total"></div>
+        <div id="complete-order"></div>
+      </div>
+      <form id="confirm-notification" class="hidden">
+        <div id="card-details">
+          <h1 class="confirm-notification-title">Enter card details</h1>
+          <input
+            class="card-detail"
+            name="fullName"
+            id="input1"
+            type="text"
+            placeholder="Enter card holder name"
+            required
+          />
+          <input
+            class="card-detail"
+            id="input2"
+            type="text"
+            placeholder="Enter card number"
+            required
+          />
+          <input
+            class="card-detail"
+            id="input3"
+            type="text"
+            placeholder="Enter CVV"
+            required
+          />
+          <button id="pay-btn" type="submit">Pay</button>
+          <span id="close-notification">x</span>
+        </div>
+      </form>
+    </main>
+    <footer>
 
-            </div>
-        </form>
-    </div>
+    </footer>
     <script src="/index.js" type="module"></script>
-</body>
+  </body>
 </html>

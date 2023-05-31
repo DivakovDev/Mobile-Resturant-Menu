@@ -25,7 +25,7 @@ export const menuData = [
     {
         productImage:"img/rice.png",
         productName:"Rice",
-        productDescription:"Furikake Salmon, Bavette Steak, vegetables",
+        productDescription:"furikake salmon, vegetables",
         price: 15,
         uuid:"4g51524ee-d115-4129-9v4b-56732tgs2"
     },
