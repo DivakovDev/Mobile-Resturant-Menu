@@ -94,6 +94,7 @@ header, main, footer{
     border: 1px solid #8B8B8B;
     box-sizing: border-box;
     margin:auto 20px auto auto;
+    font-size: large;
     color: #F59E0B;
 }
 
